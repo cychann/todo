@@ -72,5 +72,9 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/t
 =======
 https://resonant-flan-6afb53.netlify.app/
 
+<<<<<<< HEAD
 ![ezgif com-gif-maker (16)](https://user-images.githubusercontent.com/66055587/208853685-8b4410ed-84d6-4342-90c3-8b26007e7f1e.gif)
 >>>>>>> 1c38512 (Update README.md)
+=======
+![ezgif com-gif-maker (17)](https://user-images.githubusercontent.com/66055587/209628657-fd057dfb-0133-400e-b797-f6d9b94ad49b.gif)
+>>>>>>> 49aa41d (Update README.md)
