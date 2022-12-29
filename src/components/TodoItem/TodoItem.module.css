@@ -1,3 +1,4 @@
+
 .todo {
   display: flex;
   justify-content: space-between;
@@ -32,4 +33,4 @@
 
 .trash {
   color: var(--color-lightOrange);
-}
+
