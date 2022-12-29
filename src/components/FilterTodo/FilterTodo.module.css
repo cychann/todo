@@ -1,0 +1,33 @@
+.filter_box {
+  width: 15rem;
+  display: flex;
+  justify-content: space-between;
+}
+
+.filter_text {
+  font-weight: bold;
+  color: var(--color-lightOrange);
+  cursor: pointer;
+  position: relative;
+}
+
+.filter_text:hover {
+  color: var(--color-orange);
+}
+
+.filter_text:after {
+  content: "";
+  width: 0%;
+  left: 50%;
+  height: 1px;
+  display: block;
+  position: absolute;
+  margin-top: 3px;
+  border-bottom: 2px solid var(--color-grey);
+  transition: all 0.3s ease;
+}
+
+.filter_text:hover::after {
+  width: 100%;
+  left: 0;
+}
