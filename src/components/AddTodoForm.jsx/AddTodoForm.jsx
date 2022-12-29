@@ -1,4 +1,4 @@
-import React, { memo, useContext, useState } from "react";
+import React, { useContext, useState } from "react";
 import { DarkModeContext } from "../../provider/DarkModeProvider";
 import { TodoContext } from "../../provider/TodoListProvider";
 import styles from "./AddTodoForm.module.css";
