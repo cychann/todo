@@ -1,3 +1,7 @@
+<<<<<<< HEAD
+<<<<<<<< HEAD:src/components/TodoItem/TodoItem.module.css
+=======
+>>>>>>> 9c1656a (Refactor: todo 목록 렌더링하는 컴포넌트 분리)
 .todo {
   display: flex;
   justify-content: space-between;
@@ -32,4 +36,13 @@
 
 .trash {
   color: var(--color-lightOrange);
+<<<<<<< HEAD
+========
+.todo_list {
+  padding: 1rem;
+  height: 20rem;
+  overflow-y: auto;
+>>>>>>>> 9c1656a (Refactor: todo 목록 렌더링하는 컴포넌트 분리):todo/src/components/TodoList/TodoList.module.css
+=======
+>>>>>>> 9c1656a (Refactor: todo 목록 렌더링하는 컴포넌트 분리)
 }
