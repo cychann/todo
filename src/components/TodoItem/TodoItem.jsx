@@ -10,29 +10,32 @@ export default function TodoItem({ todo }) {
   const { darkMode } = useContext(DarkModeContext);
 
   return (
-    <div>
-      <li key={todo.id} className={styles.todo}>
-        <div className={styles.todo_left}>
-          <input
-            className={styles.check_box}
-            type="checkbox"
-            checked={todo.done}
-            onChange={() => action.checkTodo(todo.id)}
-          />
-          {todo.done ? (
-            <del>
-              <span className={styles.todo_done}>{todo.text}</span>
-            </del>
-          ) : (
-            <span className={`${darkMode ? styles.dark : styles.light}`}>
+    <li key={todo.id} className={styles.todo}>
+      <div className={styles.todo_left}>
+        <input
+          className={styles.check_box}
+          type="checkbox"
+          checked={todo.done}
+          onChange={() => action.checkTodo(todo.id)}
+        />
+        {todo.done ? (
+          <del>
+            <label htmlFor="checkbox" className={styles.todo_done}>
               {todo.text}
-            </span>
-          )}
-        </div>
-        <div onClick={() => action.deleteTodo(todo.id)}>
-          <FaTrashAlt />
-        </div>
-      </li>
-    </div>
+            </label>
+          </del>
+        ) : (
+          <label
+            htmlFor="checkbox"
+            className={`${darkMode ? styles.dark : styles.light}`}
+          >
+            {todo.text}
+          </label>
+        )}
+      </div>
+      <button onClick={() => action.deleteTodo(todo.id)}>
+        <FaTrashAlt />
+      </button>
+    </li>
   );
 }

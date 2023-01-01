@@ -6,28 +6,28 @@ export default function FilterTodo() {
   const { action } = useContext(TodoContext);
 
   return (
-    <div className={styles.filter_box}>
-      <div
+    <ul className={styles.filter_box}>
+      <li
         className={styles.filter_text}
         id="all"
         onClick={(e) => action.filterTodo(e.target.id)}
       >
         All
-      </div>
-      <div
+      </li>
+      <li
         className={styles.filter_text}
         id="active"
         onClick={(e) => action.filterTodo(e.target.id)}
       >
         Active
-      </div>
-      <div
+      </li>
+      <li
         className={styles.filter_text}
         id="completed"
         onClick={(e) => action.filterTodo(e.target.id)}
       >
         Completed
-      </div>
-    </div>
+      </li>
+    </ul>
   );
 }
