@@ -6,24 +6,26 @@ import styles from "./TodoList.module.css";
 export default function TodoList() {
   const { todoList, localId, filterType } = useContext(TodoContext);
 
+  const getFilterdTodoList = (todos, filter) => {
+    if (filter === "all") return todos;
+    else if (filter === "active") return todos.filter((todo) => !todo.done);
+    else return todos.filter((todo) => todo.done);
+  };
+
+  const filterdTodoList = getFilterdTodoList(todoList, filterType);
+
   useEffect(() => {
     localStorage.setItem("todoList", JSON.stringify(todoList));
     localStorage.setItem("localId", JSON.stringify(localId));
   }, [todoList, localId]);
 
   return (
-    <div className={styles.todo_list}>
-      {filterType === "all" && todoList.map((todo) => <TodoItem todo={todo} />)}
-
-      {filterType === "active" &&
-        todoList
-          .filter((todo) => !todo.done)
-          .map((todo) => <TodoItem todo={todo} />)}
-
-      {filterType === "completed" &&
-        todoList
-          .filter((todo) => todo.done)
-          .map((todo) => <TodoItem todo={todo} />)}
-    </div>
+    <section>
+      <ul className={styles.todo_list}>
+        {filterdTodoList.map((todo) => (
+          <TodoItem todo={todo} />
+        ))}
+      </ul>
+    </section>
   );
 }
