@@ -5,6 +5,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  background-color: var(--color-bg-dark);
 }
 
 .todo_input {
@@ -21,16 +22,13 @@
   height: 3rem;
   border: 0;
   border-radius: 0 0.5rem 0.5rem 0;
-  background-color: var(--color-orange);
+  background-color: var(--color-accent);
   font-size: 1.3rem;
   color: var(--color-white);
   font-weight: bold;
+  cursor: pointer;
 }
 
-.light {
-  background-color: var(--color-lightGrey);
-}
-
-.dark {
-  background-color: var(--color-dark-black);
+.todo_btn:hover {
+  filter: brightness(125%);
 }

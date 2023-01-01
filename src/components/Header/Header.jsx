@@ -7,11 +7,9 @@ import styles from "./Header.module.css";
 export default function Header() {
   const { darkMode } = useContext(DarkModeContext);
   return (
-    <div
-      className={`${styles.header} ${darkMode ? styles.dark : styles.light}`}
-    >
+    <header className={styles.header}>
       <ToggleDarkMode />
       <FilterTodo />
-    </div>
+    </header>
   );
 }

@@ -20,7 +20,7 @@ export default function TodoList() {
   }, [todoList, localId]);
 
   return (
-    <section>
+    <section className={styles.container}>
       <ul className={styles.todo_list}>
         {filterdTodoList.map((todo) => (
           <TodoItem todo={todo} />

@@ -20,22 +20,27 @@ export default function TodoItem({ todo }) {
         />
         {todo.done ? (
           <del>
-            <label htmlFor="checkbox" className={styles.todo_done}>
+            <label
+              htmlFor="checkbox"
+              className={`${styles.todo_done} ${styles.text}`}
+            >
               {todo.text}
             </label>
           </del>
         ) : (
-          <label
-            htmlFor="checkbox"
-            className={`${darkMode ? styles.dark : styles.light}`}
-          >
+          <label htmlFor="checkbox" className={styles.text}>
             {todo.text}
           </label>
         )}
       </div>
-      <button onClick={() => action.deleteTodo(todo.id)}>
-        <FaTrashAlt />
-      </button>
+      <div className={styles.icon}>
+        <button
+          onClick={() => action.deleteTodo(todo.id)}
+          className={styles.button}
+        >
+          <FaTrashAlt />
+        </button>
+      </div>
     </li>
   );
 }

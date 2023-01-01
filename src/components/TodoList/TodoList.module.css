@@ -1,5 +1,10 @@
+.container {
+  background-color: var(--color-bg);
+}
+
 .todo_list {
   padding: 1rem;
   height: 20rem;
   overflow-y: auto;
+  margin: 0;
 }

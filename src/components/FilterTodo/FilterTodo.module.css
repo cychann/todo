@@ -11,11 +11,15 @@
   position: relative;
 }
 
-.filter_text:hover {
-  color: var(--color-orange);
+.filter_text.selected {
+  color: var(--color-accent);
 }
 
-.filter_text:after {
+.filter_text:hover {
+  color: var(--color-accent);
+}
+
+.filter_text::after {
   content: "";
   width: 0%;
   left: 50%;
@@ -28,6 +32,11 @@
 }
 
 .filter_text:hover::after {
+  width: 100%;
+  left: 0;
+}
+
+.filter_text.selected::after {
   width: 100%;
   left: 0;
 }

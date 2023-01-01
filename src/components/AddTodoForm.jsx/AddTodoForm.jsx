@@ -19,7 +19,7 @@ export default function AddTodoForm() {
 
   return (
     <form
-      className={`${styles.form} ${darkMode ? styles.dark : styles.light}`}
+      className={styles.form}
       onSubmit={(e) => {
         handleSubmit(e);
         text.trim().length !== 0 && action.addTodo(text);
