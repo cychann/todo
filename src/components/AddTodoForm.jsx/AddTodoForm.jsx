@@ -1,12 +1,10 @@
 import React, { useContext, useState } from "react";
-import { DarkModeContext } from "../../provider/DarkModeProvider";
 import { TodoContext } from "../../provider/TodoListProvider";
 import styles from "./AddTodoForm.module.css";
 
 export default function AddTodoForm() {
   const { action } = useContext(TodoContext);
   const [text, setText] = useState("");
-  const { darkMode } = useContext(DarkModeContext);
 
   const handleChange = (e) => {
     setText(e.target.value);
