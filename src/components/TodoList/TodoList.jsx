@@ -23,7 +23,7 @@ export default function TodoList() {
     <section className={styles.container}>
       <ul className={styles.todo_list}>
         {filterdTodoList.map((todo) => (
-          <TodoItem todo={todo} />
+          <TodoItem todo={todo} key={todo.id} />
         ))}
       </ul>
     </section>

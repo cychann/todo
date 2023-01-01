@@ -1,5 +1,4 @@
 import React, { useContext } from "react";
-import { DarkModeContext } from "../../provider/DarkModeProvider";
 import { TodoContext } from "../../provider/TodoListProvider";
 import styles from "./TodoItem.module.css";
 
@@ -7,7 +6,6 @@ import { FaTrashAlt } from "react-icons/fa";
 
 export default function TodoItem({ todo }) {
   const { action } = useContext(TodoContext);
-  const { darkMode } = useContext(DarkModeContext);
 
   return (
     <li key={todo.id} className={styles.todo}>
