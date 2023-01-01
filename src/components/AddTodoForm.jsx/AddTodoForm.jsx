@@ -22,7 +22,7 @@ export default function AddTodoForm() {
       className={`${styles.form} ${darkMode ? styles.dark : styles.light}`}
       onSubmit={(e) => {
         handleSubmit(e);
-        text && action.addTodo(text);
+        text.trim().length !== 0 && action.addTodo(text);
       }}
     >
       <input
