@@ -4,6 +4,17 @@ export const DarkModeContext = createContext();
 
 export default function DarkModeProvider({ children }) {
   const [darkMode, setDarkMode] = useState(false);
+
+  const updateDarkMode = (darkMode) => {
+    if (darkMode) {
+      document.documentElement.classList.add("dark");
+      localStorage.theme = "dark";
+    } else {
+      document.documentElement.classList.remove("dark");
+      localStorage.theme = "light";
+    }
+  };
+
   const toggleDarkMode = () => {
     setDarkMode(!darkMode);
     updateDarkMode(!darkMode);
@@ -23,14 +34,4 @@ export default function DarkModeProvider({ children }) {
       {children}
     </DarkModeContext.Provider>
   );
-}
-
-function updateDarkMode(darkMode) {
-  if (darkMode) {
-    document.documentElement.classList.add("dark");
-    localStorage.theme = "dark";
-  } else {
-    document.documentElement.classList.remove("dark");
-    localStorage.theme = "light";
-  }
 }

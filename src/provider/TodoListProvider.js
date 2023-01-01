@@ -3,11 +3,13 @@ import { createContext, useState } from "react";
 export const TodoContext = createContext();
 
 export default function TodoListProvider({ children }) {
-  const [todoList, setTodoList] = useState(
-    localStorage.getItem("todoList")
+  const readTodosFromLocalStorage = () => {
+    return localStorage.getItem("todoList")
       ? JSON.parse(localStorage.getItem("todoList"))
-      : []
-  );
+      : [];
+  };
+
+  const [todoList, setTodoList] = useState(() => readTodosFromLocalStorage());
   const [localId, setLocalId] = useState(
     localStorage.getItem("localId") ? localStorage.getItem("localId") : 1
   );
